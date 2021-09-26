@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h2 class="title">Contact Us</h2>
+    <ContactForm />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import ContactForm from "./components/ContactForm.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    ContactForm,
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.title {
+  margin-bottom: 1.5rem;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+@media screen and (max-width: 600px) {
+  #app {
+    max-width: 90%;
+  }
+}
+
+input,
+textarea {
+  outline: none;
+  box-shadow: none !important;
+  border: 1px solid #ccc !important;
 }
 </style>
