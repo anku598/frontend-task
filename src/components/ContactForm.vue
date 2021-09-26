@@ -171,7 +171,9 @@ export default class ContactForm extends Vue {
             });
           })
           .catch((e) => {
-            this.error = true;
+            if (e) {
+              this.error = true;
+            }
           });
       })
       .catch((e) => {
